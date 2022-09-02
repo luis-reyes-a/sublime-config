@@ -1,0 +1,29 @@
+{
+	"color_scheme": "Solarized (dark).sublime-color-scheme",
+	"font_face": "consolas",
+	"font_size": 13,
+	"line_numbers": false,
+	"highlight_line": true,
+	//"block_caret": true,
+
+	"show_git_status_in_status_bar": false,
+	"ui_scale": 1.5,
+
+	"hardware_acceleration": "opengl",
+
+	"binary_file_patterns": ["*.exe", ".dll", "*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+
+	"auto_match_enabled": false,
+
+	"word_wrap": "true",
+	"auto_complete": false, 
+
+	"show_git_status": false,
+	/*"show_git_status_in_status_bar": false,*/
+	"mini_diff": false,
+
+
+	"ignored_packages": [],
+	"indent_guide_options": ["solid", "draw_active"],
+	"theme": "auto",
+}

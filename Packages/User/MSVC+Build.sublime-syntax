@@ -1,0 +1,27 @@
+%YAML 1.2
+---
+name: MSVC Build Output
+file-extensions: 
+  - cl
+scope: msvc.build
+
+contexts: 
+  main:
+    - match: '^((?:\w\:)?[^\:\n]+)\((\d+)\)\: error \w\d+: ([^\n]+)$'
+      scope: keyword.title.error.msvc
+    - match: '^((?:\w\:)?[^\:\n]+)\((\d+)\)\: warning \w\d+: ([^\n]+)$'
+      scope: string.warning.msvc
+    - match: '^((?:\w\:)?[^\:\n]+)\((\d+)\)\: note: ([^\n]+)$'
+      scope: constant.numeric.note.msvc
+    - match: '^[^\n^\:]* : (?:fatal )?error LNK(\d+): ([^\n]+)$'
+      scope: keyword.title.link-error.msvc
+    - match: '^Could Not Find [^\n]+$'
+      scope: keyword.title.missing-file.msvc
+    - match: '^\[[^\]]+\]+$'
+      scope: storage.type.finish-message.msvc
+    - match: '^[^\n]*Microsoft[^\n]*$'
+      scope: comment.compiler-version.msvc
+    - match: '^/out\:[^\n]*$'
+      scope: entity.name.exe-creation.msvc
+    - match: '^[\t ]*Creating[^\n]+$'
+      scope: entity.name.dll-creation.msvc

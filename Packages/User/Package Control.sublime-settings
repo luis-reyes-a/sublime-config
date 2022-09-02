@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Deselect",
+		"HighlightWords",
+		"Hippie Autocomplete",
+		"Horizontal Scroll",
+		"Multicommand",
+		"Package Control",
+		"PackageResourceViewer",
+		"SelectUntil",
+		"Solarized Color Scheme",
+	],
+}
