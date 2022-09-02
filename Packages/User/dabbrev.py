@@ -19,7 +19,7 @@ class dabbrev(sublime_plugin.TextCommand):
 			regex  = "\W" + sample + "\w*";
 			regex_flags = 0;
 		
-			print("*********Find matches with regex: " + regex);
+			#print("*********Find matches with regex: " + regex);
 			point = first_sel.begin();
 			
 			# note for some reason Sublime will open a popup screen whenever I try to run a command after any of these 
@@ -62,9 +62,10 @@ class dabbrev(sublime_plugin.TextCommand):
 						
 				view_index += 1;
 			
-			
+			"""
 			for option in options:
 				print(option);
+			"""
 			
 			
 			# NOTE options should always have one element (sample word). If we find actual matches, begin at first index (1)
