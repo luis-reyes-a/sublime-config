@@ -23,7 +23,8 @@
 	"mini_diff": false,
 
 
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 	"indent_guide_options": ["solid", "draw_active"],
 	"theme": "auto",
 }

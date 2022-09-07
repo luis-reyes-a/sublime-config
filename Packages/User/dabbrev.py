@@ -1,6 +1,6 @@
 import sublime
 import sublime_plugin
-from collections import defaultdict
+#from collections import defaultdict
 import re
 
 resample_word_again = True;
@@ -12,6 +12,18 @@ class dabbrev(sublime_plugin.TextCommand):
 		global resample_word_again, next_option_index, options, sample_region;
 		first_sel     = self.view.sel()[0];
 		sample_region = self.view.word(first_sel)
+		
+		"""
+		transient_views = sublime.active_window().views(include_transient=True);
+		normal_views    = sublime.active_window().views(include_transient=False);
+
+		print("Num views is %d, transient is %d\n" % (len(normal_views), len(transient_views)));
+		
+		normal_sheets   = sublime.active_window().sheets();
+		selected_sheets = sublime.active_window().selected_sheets();
+		print("Num sheets is %d, selected is %d\n" % (len(normal_sheets), len(selected_sheets)));
+		"""
+		
 		if resample_word_again:
 			resample_word_again = False
 			

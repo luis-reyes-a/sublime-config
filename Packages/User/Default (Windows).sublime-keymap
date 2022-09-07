@@ -45,14 +45,16 @@
   },
 
   //TODO this is not general, what I really want is unselect_active_tab_if_not_last_one
-  { "keys": ["ctrl+w"], "command": "multicommand",
-  	"args": { 
-  	    	"commands": [
-  	    		{"command": "focus_to_left" },
-  	    		{"command": "unselect_to_right"},
-  	    	 ]
-  	}
-  },
+  // { "keys": ["ctrl+w"], "command": "multicommand",
+  // 	"args": { 
+  // 	    	"commands": [
+  // 	    		{"command": "focus_to_left" },
+  // 	    		{"command": "unselect_to_right"},
+  // 	    	 ]
+  // 	}
+  // },
+
+  { "keys": ["ctrl+w"], "command": "close_active_sheet"},
 
   //make ctrl+w close everything
   { "keys": ["ctrl+w"], "command": "hide_panel", "args": {"cancel": true},
@@ -91,7 +93,9 @@
 
 	{ "keys": ["ctrl+k"], "command": "run_macro_file",   "args": {"file": "Packages/User/select_line_no_whitespace.sublime-macro"} },
 
-	{ "keys": ["ctrl+;"],  "command": "focus_neighboring_group", "args": {"forward": true} },
+	//{ "keys": ["ctrl+;"],  "command": "focus_neighboring_group", "args": {"forward": true} },
+
+	{ "keys": ["ctrl+;"],  "command": "cycle_selected_tab"}, 
 
 
 	{ "keys": ["ctrl+'"], "command": "expand_selection", "args": {"to": "scope"} },
@@ -100,16 +104,22 @@
 
 	{ "keys": ["ctrl+h"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"], "side_by_side": true} },
 
+	{ "keys": ["ctrl+b"], "command": "noop"},
+	{ "keys": ["ctrl+m"], "command": "noop"},
+	{ "keys": ["ctrl+n"], "command": "noop"},
+
 	{ "keys": ["ctrl+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["ctrl+p"], "command": "unselect_others" },
 
-	{"keys": ["ctrl+space"], "command": "reverse_select"},
+	{"keys": ["ctrl+space"], "command": "cursor_mark_swap"},
 
-	{ "keys": ["f11"], "command": "next_bookmark" },
-	{ "keys": ["f10"], "command": "prev_bookmark" },
-	{ "keys": ["f9"], "command": "toggle_bookmark" },
-	{ "keys": ["ctrl+f9"], "command": "clear_bookmarks" },
+	{ "keys": ["ctrl+end"],    "command": "next_bookmark" },
+	{ "keys": ["ctrl+home"],   "command": "prev_bookmark" },
+	{ "keys": ["insert"],      "command": "toggle_bookmark" },
+	{ "keys": ["ctrl+insert"], "command": "clear_bookmarks" },
 
+	{ "keys": ["f9"],      "command": "noop"},
+	{ "keys": ["ctrl+f9"], "command": "noop"},
 
 	{ "keys": ["ctrl+f12"], "command": "toggle_record_macro" },
 	{ "keys": ["f12"],      "command": "run_macro" },
