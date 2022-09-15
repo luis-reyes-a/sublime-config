@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Solarized (dark).sublime-color-scheme",
 	"font_face": "consolas",
-	"font_size": 13,
+	"font_size": 11,
 	"line_numbers": false,
 	"highlight_line": true,
 	//"block_caret": true,

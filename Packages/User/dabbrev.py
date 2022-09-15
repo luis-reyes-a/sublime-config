@@ -1,6 +1,5 @@
 import sublime
 import sublime_plugin
-#from collections import defaultdict
 import re
 
 resample_word_again = True;
@@ -11,7 +10,12 @@ class dabbrev(sublime_plugin.TextCommand):
 	def run(self, edit):
 		global resample_word_again, next_option_index, options, sample_region;
 		first_sel     = self.view.sel()[0];
-		sample_region = self.view.word(first_sel)
+		sample_region = self.view.word(first_sel);
+		# clamp sample region to end at cursor pos
+		if sample_region.b > sample_region.a:
+			sample_region.b = min(sample_region.b, first_sel.b);
+		else:
+			sample_region.a = min(sample_region.a, first_sel.b);
 		
 		"""
 		transient_views = sublime.active_window().views(include_transient=True);
@@ -40,6 +44,9 @@ class dabbrev(sublime_plugin.TextCommand):
 		
 			options = [sample] #first word will always be here, so add it anyways
 			views = [self.view];
+			
+			#TODO would be cool if we could search the matching .h/.cpp file as well, but
+			#don't feel comfortable enough in python to try to add that
 			
 			#if 0: #this adds more views based on recently opened files, you can ommit this if you only want the curernt view to be used
 			window = sublime.active_window();

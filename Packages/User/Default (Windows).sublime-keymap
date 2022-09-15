@@ -98,7 +98,8 @@
 	{ "keys": ["ctrl+;"],  "command": "cycle_selected_tab"}, 
 
 
-	{ "keys": ["ctrl+'"], "command": "expand_selection", "args": {"to": "scope"} },
+	//{ "keys": ["ctrl+'"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["ctrl+'"], "command": "my_expand_to_scope" },
 
 	{ "keys": ["alt+h"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
 
@@ -487,8 +488,7 @@
 	  "context": [{"key": "setting.command_mode"}]},
 
 
-    { "keys": ["'"], "command": "expand_selection", 
-	  "args": {"to": "scope"},
+    { "keys": ["'"], "command": "my_expand_to_scope", 
 	  "context": [{"key": "setting.command_mode"}]
     },  
 

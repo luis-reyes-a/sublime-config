@@ -26,7 +26,7 @@ variables:
   operator_method_name: '\boperator\s*(?:[-+*/%ˆ&|~!=<>]|[-+*/%^&|=!<>]=|<<=?|>>=?|&&|\|\||\+\+|--|,|->\*?|\(\)|\[\])'
   casts: 'const_cast|dynamic_cast|reinterpret_cast|static_cast'
   operator_keywords: 'and|and_eq|bitand|bitor|compl|not|not_eq|or|or_eq|xor|xor_eq|noexcept'
-  control_keywords: 'break|case|catch|continue|default|do|else|for|goto|if|_Pragma|return|switch|throw|try|while'
+  control_keywords: 'break|case|catch|continue|default|do|else|for|goto|if|_Pragma|return|switch|throw|try|while|for_index_inc|for_index_dec|for_array_forward|for_array_reverse|for_ll_forward|for_ll_reverse'
   memory_operators: 'new|delete'
   basic_types: 'asm|__asm__|auto|bool|_Bool|char|_Complex|double|float|_Imaginary|int|long|short|signed|unsigned|void'
   before_tag: 'struct|union|enum\s+class|enum\s+struct|enum|class'
