@@ -1,0 +1,81 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+
+		{
+		    "name": "Tag name",
+		    "scope": "storage.constant",
+		    "foreground": "var(white3)"
+		},
+
+		{
+		    "name": "Function argument",
+		    "scope": "variable.parameter",
+		    "foreground": "var(white2)"
+		},
+
+		{
+		    "name": "Function call",
+		    "scope": "variable.function, variable.annotation",
+		    "foreground": "var(blue5)"
+		},
+
+		{
+		    "name": "Keyword",
+		    "scope": "keyword - keyword.operator, keyword.operator.word",
+		    "foreground": "var(orange)",
+		    "font_style": "bold"
+		},
+
+		{
+		    "name": "Keyword",
+		    "scope": "keyword.control.import",
+		    "foreground": "var(orange)",
+		    "font_style": "underline"
+		},
+
+		// types
+		{
+		    "name": "Storage type",
+		    "scope": "storage.type",
+		    "foreground": "var(pink)",
+		    "font_style": ""
+		},
+
+		{
+		    "name": "Comment",
+		    "scope": "comment, punctuation.definition.comment",
+		    "foreground": "var(blue6)",
+		    "font_style": "italic"
+		},
+
+
+		{
+		    "name": "Operators",
+		    "scope": "keyword.operator",
+		    "foreground": "var(white)"
+		},
+
+
+		//same as original theme, but no italics
+		{
+		    "name": "Number Suffix",
+		    "scope": "storage.type.numeric",
+		    "foreground": "var(pink)",
+		    "font_style": ""
+		},
+		{
+		    "name": "Built-in constant",
+		    "scope": "constant.language",
+		    "foreground": "var(red)",
+		    "font_style": ""
+		},
+	]
+}

@@ -19,7 +19,6 @@
 		{"keyword": "NOTE", "color": "support.function"},
 		{"keyword": "nocheckin", "color": "support.function"},
 		{"keyword": "SPEED", "color": "support.function"},
-		{"keyword": "breakpoint", "color": "support.function"},
 		//{"keyword": "FIXIT .*", "color": "support.function", "flag": 2},
 	]
 

@@ -1,10 +1,12 @@
 {
-	"color_scheme": "Solarized (dark).sublime-color-scheme",
+	"color_scheme": "Packages/Visual Studio Dark/Visual Studio Dark.tmTheme",
 	"font_face": "consolas",
-	"font_size": 11,
+	"font_size": 13,
 	"line_numbers": false,
 	"highlight_line": true,
 	//"block_caret": true,
+
+	"spell_check": false,
 
 	"show_git_status_in_status_bar": false,
 	"ui_scale": 1.5,
@@ -15,7 +17,7 @@
 
 	"auto_match_enabled": false,
 
-	"word_wrap": "true",
+	"word_wrap": "auto",
 	"auto_complete": false, 
 
 	"show_git_status": false,
@@ -27,4 +29,5 @@
 	],
 	"indent_guide_options": ["solid", "draw_active"],
 	"theme": "auto",
+	"ruler_style": "solid",
 }

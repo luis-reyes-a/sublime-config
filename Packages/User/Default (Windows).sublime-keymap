@@ -91,7 +91,7 @@
 		[ {"key": "panel", "operand": "find"}, {"key": "panel_has_focus"} ]
 	},
 
-	{ "keys": ["ctrl+k"], "command": "run_macro_file",   "args": {"file": "Packages/User/select_line_no_whitespace.sublime-macro"} },
+	//{ "keys": ["ctrl+k"], "command": "run_macro_file",   "args": {"file": "Packages/User/select_line_no_whitespace.sublime-macro"} },
 
 	//{ "keys": ["ctrl+;"],  "command": "focus_neighboring_group", "args": {"forward": true} },
 
@@ -101,15 +101,18 @@
 	//{ "keys": ["ctrl+'"], "command": "expand_selection", "args": {"to": "scope"} },
 	{ "keys": ["ctrl+'"], "command": "my_expand_to_scope" },
 
-	{ "keys": ["alt+h"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+	{ "keys": ["ctrl+k"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
 
 	{ "keys": ["ctrl+h"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"], "side_by_side": true} },
 
+	{ "keys": ["ctrl+m"], "command": "open_file_in_vs"},
+
+
 	{ "keys": ["ctrl+b"], "command": "noop"},
-	{ "keys": ["ctrl+m"], "command": "noop"},
 	{ "keys": ["ctrl+n"], "command": "noop"},
 
 	{ "keys": ["ctrl+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["alt+o"],  "command": "goto_symbol_in_project" },
 	{ "keys": ["ctrl+p"], "command": "unselect_others" },
 
 	{"keys": ["ctrl+space"], "command": "cursor_mark_swap"},
@@ -125,7 +128,11 @@
 	{ "keys": ["ctrl+f12"], "command": "toggle_record_macro" },
 	{ "keys": ["f12"],      "command": "run_macro" },
 
-	{ "keys": ["ctrl+g"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
+	{ "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["ctrl+n"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
+	{ "keys": ["alt+n"],  "command": "goto_definition", "args": {"side_by_side": false} },
+
+	{ "keys": ["alt+g"], "command": "goto_definition" },
 
 	{ "keys": ["ctrl+f1"],      "command": "goto_definition" },
 	{ "keys": ["f1"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
@@ -211,6 +218,7 @@
 	{ "keys": ["ctrl+t"], "command": "new_file" },
 
 	{ "keys": ["ctrl+l"], "command": "show_at_center" },
+	{ "keys": ["alt+l"], "command": "duplicate_line" },
 
 	{ "keys": ["alt+x"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 
@@ -225,7 +233,7 @@
 	{ "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
 	{ "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
 
-	{ "keys": ["ctrl+d"], "command": "deselect" }, 
+	//{ "keys": ["ctrl+d"], "command": "deselect" }, 
 
     { "keys": ["f5"], "command": "build" },
 	{ "keys": ["ctrl+pagedown"], "command": "next_result" },
@@ -586,6 +594,12 @@
    						{ "key": "panel_visible", "operator": "equal", "operand": true },
    					]
    			},
+
+   			{ "keys": ["escape"], "command": "deselect", "context":
+   			      [
+   			          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+   			      ]   
+   			}
 	
 
 ]
