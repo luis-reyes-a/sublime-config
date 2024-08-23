@@ -1,0 +1,25 @@
+{
+	// The colors to highlight texts are specified by a list of theme scope names,
+	// and HighlightWords uses this list in circular order.
+	"colors_by_scope": [
+		"string",
+		"entity.name.class",
+		"variable.parameter",
+		"invalid.deprecated",
+		"invalid",
+		"support.function"
+	],
+	"whole_word": false,
+	"use_regex": false,
+	"ignore_case": false,
+
+
+	"permanent_highlight_keyword_color_mappings": [
+		{"keyword": "TODO", "color": "support.function"},
+		{"keyword": "NOTE", "color": "support.function"},
+		{"keyword": "nocheckin", "color": "support.function"},
+		{"keyword": "SPEED", "color": "support.function"},
+		//{"keyword": "FIXIT .*", "color": "support.function", "flag": 2},
+	]
+
+}

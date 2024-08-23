@@ -1,0 +1,24 @@
+[
+	{
+		"caption": "vsplit",
+		"command": "vsplit",
+	},
+	{
+		"caption": "vs",
+		"command": "open_file_in_vs",
+	},
+	{
+		"caption": "View: Console",
+		"command": "show_panel",
+		"args": {"panel": "console", "toggle": true}
+	},
+	{
+		"caption": "File: Close",
+		"command": "close_file",
+	},
+	{
+		"caption": "start.",
+		"command": "open_dir",
+		"args": {"dir": "$file_path", "file": "$file_name"} 
+	},
+]

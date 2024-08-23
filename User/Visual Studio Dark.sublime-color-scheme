@@ -1,0 +1,44 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+		"text_regular": "hsl(0, 0%, 86%)",
+		"text_bright": "hsl(0, 0%, 100%)",
+		"green": "hsl(169, 52%, 53%)",
+		"keyword": "hsl(297, 41%, 73%)",
+		"preproc_directive": "#9B9B9B"
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+		{
+		    "name": "Data Type",
+		    "scope": "storage.type",
+		    "foreground": "var(green)"
+		},
+
+		{
+		    "name": "Keyword",
+		    "scope": "keyword - keyword.operator, keyword.operator.word",
+		    "foreground": "var(keyword)",
+		    "font_style": "bold"
+		},
+
+		
+
+		{
+		    "name": "Keyword",
+		    "scope": "keyword.operator",
+		    "foreground": "var(text_bright)",
+		},
+
+		{
+		    "name": "Keyword",
+		    "scope": "keyword.control.import",
+		    "foreground": "var(preproc_directive)",
+		    "font_style": "underline"
+		},
+	]
+}

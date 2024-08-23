@@ -1,0 +1,7 @@
+{
+	"cmd": "build.bat",
+	"working_dir": "$project_path",
+	"file_regex": "^((?:\\w\\:)?[^\\:\\n]+)\\((\\d+)\\)\\: (?:error|warning) \\w\\d+: ()([^\\n]+)$",
+	"shell": true,
+	"syntax": "MSVC+Build.sublime-syntax",
+}
