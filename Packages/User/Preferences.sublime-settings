@@ -1,0 +1,22 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"remember_full_screen": true,
+	"font_face": "consola",
+	"font_size": 16,
+	"color_scheme": "Mariana.sublime-color-scheme",
+
+	"auto_match_enabled": false,
+	"auto_complete": false,
+	"relative_line_numbers": true,
+
+	"word_wrap": true,
+	"block_caret": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+
+	"bold_folder_labels": true,
+}
