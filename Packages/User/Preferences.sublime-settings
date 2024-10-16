@@ -4,11 +4,11 @@
 	"remember_full_screen": true,
 	"font_face": "consola",
 	"font_size": 16,
-	"color_scheme": "Mariana.sublime-color-scheme",
+	"color_scheme": "deep-blue.sublime-color-scheme",
 
 	"auto_match_enabled": false,
 	"auto_complete": false,
-	"relative_line_numbers": true,
+	"relative_line_numbers": false,
 
 	"word_wrap": true,
 	"block_caret": true,
@@ -19,4 +19,5 @@
 	"index_files": true,
 
 	"bold_folder_labels": true,
+	"overlay_scroll_bars": "enabled",
 }

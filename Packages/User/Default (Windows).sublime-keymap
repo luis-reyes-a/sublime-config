@@ -1,6 +1,7 @@
 [
 	{ "keys": ["ctrl+o"],       "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-	{ "keys": ["ctrl+shift+o"], "command": "prompt_open_file" },
+	{ "keys": ["ctrl+shift+o"], "command": "goto_symbol_in_project" },
+	{ "keys": ["alt+shift+o"], "command": "prompt_open_file" },
 
 	{ "keys": ["alt+s"], "command": "save_all", "args": { "async": true } },
 
@@ -27,6 +28,24 @@
 			{ "key": "auto_complete_primed", "operator": "equal", "operand": true },
 		]
 	},
+
+	{ "keys": ["ctrl+pagedown"], "command": "next_result" },
+	{ "keys": ["ctrl+pageup"],   "command": "prev_result" },
+
+	{
+		"keys": ["f1"], "command": "show_panel",
+		"args": {"panel": "output.exec"},
+		"context": [ { "key": "panel_visible", "operand": false } ]
+	},
+
+	{
+		"keys": ["f1"], "command": "hide_panel",
+		"args": {"panel": "output.exec"},
+		"context": [ { "key": "panel_visible", "operand": true } ]
+	},
+
+	//{ "keys": ["f1"], "command": "show_panel", "args": {"output.exec": "console", "toggle": true} },
+	{ "keys": ["ctrl+f1"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	
 
 	{ "keys": ["alt+x"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
@@ -35,8 +54,14 @@
 	{ "keys": ["ctrl+space"],  "command": "emacs_set_mark" }, // used to be autocomplete
 	{ "keys": ["shift+space"], "command": "cursor_mark_swap" },
 
-	{ "keys": ["ctrl+l"], "command": "duplicate_line" },
-	{ "keys": ["alt+l"], "command": "show_at_center" },
+	{ "keys": ["ctrl+l"], "command": "show_at_center" },
+	{ "keys": ["alt+l"], "command": "duplicate_line" },
+
+	{ "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+
+	{ "keys": ["ctrl+shift+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+	{ "keys": ["ctrl+shift+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
 
 	{ "keys": ["ctrl+t"], "command": "toggle_tabs" },
 
@@ -54,7 +79,7 @@
 	{ "keys": ["alt+n"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
 
 	{ "keys": ["ctrl+`"], "command": "toggle_side_bar" },
-	{ "keys": ["f1"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	
 
 	{ "keys": ["alt+up"],   "command": "scroll_lines", "args": {"amount": 1.0 } },
 	{ "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },

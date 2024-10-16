@@ -1,0 +1,101 @@
+{
+    "name": "Example Color Scheme",
+    "globals":
+    {
+        "background": "#181a26",
+        "foreground": "#cccccc",
+        "caret": "#ffe792",
+		"block_caret": "#ffe79244",
+		"gutter": "#181a26",
+        "gutter_foreground": "#cccccc",
+		"gutter_foreground_highlight": "#181a26",
+		"selection": "#ffe792",
+		"selection_foreground": "#181a26",
+		"highlight":      "#f08080",
+		"find_highlight": "#f08080"
+    },
+	 "variables": {
+		"seagreen":   "#4eee94",
+		"gold":       "#daa520",
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "#6ca6cd"
+        },
+		{
+            "name": "unique identifiers",
+            "scope": "entity",
+            "foreground": "var(gold)"
+        },
+		{
+            "name": "unique identifiers",
+            "scope": "keyword.control.import",
+            "foreground": "var(gold)"
+        },
+		/*{
+            "name": "function calls",
+            "scope": "variable.function",
+            "foreground": "#6ca6cd"
+        },*/
+		{
+            "name": "keywords",
+            "scope": "keyword",
+            "foreground": "var(seagreen)"
+        },
+		{
+            "name": "type modifiers like static, const whatever",
+            "scope": "storage.modifier",
+            "foreground": "var(seagreen)"
+        },
+		{ 
+            "name": "operators and stuff",
+            "scope": "keyword.operator",
+            "foreground": "#ffffff"
+        },
+		/*{
+            "name": "operators and stuff",
+            "scope": "keyword.operator.assignment",
+            "foreground": "#6ca6cd", // "#f08080"
+        },*/
+		/* this doesn't seem to work with stock c++ syntax.. :({
+            "name": "operators and stuff",
+            "scope": "keyword.operator.logical",
+            "foreground": "#f08080"
+        },*/
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "#deb887",
+        },
+		/*{
+            "name": "numbers",
+            "scope": "constant.numeric.value",
+            "foreground": "#deb887",
+        },*/
+		{
+            "name": "true false nullptr",
+            "scope": "constant.language",
+            "foreground": "#deb887",
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "#cccccc",
+        },
+		{
+            "name": "escape codes in strings",
+            "scope": "constant.character.escape",
+            "foreground": "#cd853f",
+        },
+		{
+            "name": "printf specifier format stuff like %d",
+            "scope": "constant.other.placeholder",
+            "foreground": "#f08080",
+        }
+		
+		
+    ]
+}
